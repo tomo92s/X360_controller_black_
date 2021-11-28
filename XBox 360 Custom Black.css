@@ -1,0 +1,301 @@
+/*BEGIN Xbox 360 Controller (Black) Styling*/
+/*This class defines the base attributes of the skin*/
+.controller.custom {
+    background: url(https://i.imgur.com/uIIA38k.png); 
+    height: 539px;
+    width: 638px;
+}
+.custom.disconnected { /* This class shows an image when the controller is disconnected */
+    background: url(http://i.imgur.com/03hwybn.png);
+}
+/* This hides the controller's button when disconnected so only the background image remains */ 
+.custom.disconnected div {
+    display: none;
+}
+.custom .triggers{ /* The triggers are housed inside a div, so this sizes the div properly and positions it */
+    width: 119px;
+    height: 82px;
+    position: absolute;
+    left: 125px;
+}
+.custom .trigger{/* These are the actual triggers themselves */
+    width: 60px;
+    height: 83px;
+    background: url(http://i.imgur.com/nQpPhb9.png);
+    opacity: 0;
+}
+/* The left and right classes below are used to position the triggers
+within the div they're contained in. Since their positions is realtive
+to the size of the parent element, we simply resize the parent element 
+above to achieve the desired position. */
+.custom .trigger.left{ 
+    float: left;
+}
+.custom .trigger.right{
+ position: absolute;
+ right: -277px; 
+ background-position: 60px 0px;
+}
+/* The bumpers follow the same methodology as the triggers in terms of
+placement */
+.custom .bumper{
+    width: 111px;
+    height: 41px;
+    background: url(http://i.imgur.com/VuNoWSs.png);
+    opacity: 0;
+}
+.custom .bumpers{
+    position: absolute;
+    width: 111px;
+    height: 28px;
+    left: 99px;
+    top: 72px;
+}
+.custom .bumper.pressed{ /* The '.pressed' class is used for most buttons to signify they've been pressed */
+    opacity: 1;
+}
+.custom .bumper.left{
+ position: absolute;
+top: 18px;
+left: -21px;
+}
+.custom .bumper.right{
+position: absolute;
+top: 17px;
+right: -348px;
+background-position: 111px 0px;
+}
+.custom .quadrant{
+    position: absolute;
+    background: url(http://i.imgur.com/rsxgMA7.png);
+    height: 87px;
+    width: 88px;
+    top: 168px;
+    left: 275px;
+}
+/* Since the player indicator is just a CSS sprite, we change the 
+position of the background to match the player number.
+NOTE: Player orderin starts at 0, so p0 = Player 1 */
+.custom .p0{
+    background-position: 0 -6px;
+}
+.custom .p1{
+	top: 162px;
+	left: 275px;
+    background-position-x: -87px;
+}
+.custom .p2{
+	top: 162px;
+	left:275px;
+    background-position-x: -174px;
+}
+.custom .p3{
+	top: 162px;
+	left:275px;
+    background-position-x: -262px;
+}
+/* This is to size and position the containing div for the 
+start and select buttons. */
+.custom .arrows{
+    position: absolute;
+    width: 81px;
+    height: 32px;
+    top: 250px;
+    left: 291px;
+}
+/* Setting the size and CSS sprite for the start adn select buttons */
+.custom .back, .custom .start{
+    background: url(http://i.imgur.com/RJagKpr.png);
+    width: 81px;
+    height: 32px;
+}
+.custom .back.pressed{
+position: absolute;
+    left: -56px;
+    width: 40px;
+	height: 32px;
+	top: -59px;
+	background-position-x: -1px;
+	
+}
+.custom .start.pressed{
+position: absolute;
+    width: 38px;
+	top: -59px;
+	left: 75px;
+    background-position: 37px 0;
+}
+/* Positioning and size of the container for the face buttons */
+.custom .abxy{
+    position: absolute;
+    width: 202px;
+    height: 46px;
+    top: 156px;
+    left: 538px;
+}
+/* base class used to simplify the sprite mapping */
+.custom .button{
+width: 0px;
+    background-position-y: -59px;
+    margin-top: -0px;
+}
+.custom .button.pressed{
+	position: absolute;
+    width: 47px;
+    height:46px;
+    background: url(http://i.imgur.com/0UzDvO6.png);
+}
+.custom .a.pressed{
+    background-position: 47px 0;
+    top: 73px;
+    left: -58px;
+}
+.custom .b.pressed{
+    background-position: 97px 0;
+    top: 24px;
+    left: -8px;
+}
+.custom .x.pressed{
+    background-position: 0 0;
+    top: 24px;
+	left: -107px;
+}
+.custom .y.pressed{
+    background-position: -53px 0;
+	top: -25px;
+    left: -59px;
+}
+/* Analog sticks follow the same principles as the triggers in terms of positioning
+Note that the rotation of the sticks in hard coded with javascript, so it applies 
+the CSS inline. */
+.custom .sticks{
+    position: absolute;
+    width: 364px;
+    height: 105px;
+    top: 328px;
+    left: 210px;
+}
+.custom .stick{
+    position: absolute;
+    background: url(http://i.imgur.com/v7qRGBP.png);
+    height:82px;
+    width: 91px;
+}
+.custom .stick.pressed.left{
+    background-position-x: -93px;
+}
+.custom .stick.pressed.right{
+position: absolute;
+width: 83px;
+    background-position-x: 83px;
+}
+.custom .stick.left{
+    top: -165px;
+    left: -116px;
+}
+.custom .stick.right{
+    top: -51px;
+    left: 154px;
+}
+/* Dpad possitioning and sizing */
+.custom .dpad{
+    position: absolute;
+    width: 140px;
+    height: 132px;
+    top: 192px;
+    left: 74px;
+}
+.custom .face{
+    background: url(http://i.imgur.com/LFxGoLl.png);
+    position: absolute;
+}
+.custom .face.pressed.up{
+	position: absolute;
+	width: 55px;
+	height: 55px;
+    left: 131px;
+    top: 66px;
+    background-position: -57px 0px;
+}
+.custom .face.pressed.down{
+	position: absolute;
+	width: 55px;
+	height: 55px;
+    left: 128px;
+    top: 120px;
+    background-position: 114px 0;
+}
+.custom .face.pressed.left{
+	position: absolute;
+	width: 55px;
+	height: 55px;
+    top: 97px;
+    left: 103px;
+    background-position: 0px 0;
+}
+.custom .face.pressed.right{
+	position: absolute;
+	width: 55px;
+	height: 55px;
+    top: 97px;
+    right: -73px;
+    background-position: 55px 0;
+}
+.custom .face.pressed{
+    margin-top: 5px;
+    background-position-y: 52px;
+}
+/* The following entries are empty because I haven't used them yet, but they
+exist for the purpose of displaying a fightstick. Since fightsticks have 
+the left and right triggers and digital buttons, there are separate 
+html items that allow the triggers to be shown as button presses isntead of
+an opacity setting */
+.custom .trigger-button.left{
+    
+}
+.custom .trigger-button.right{
+    
+}
+.custom .trigger-button.left.pressed{
+    
+}
+.custom .trigger-button.right.pressed{
+    
+}
+/* This is where the fight stick CSS would go. The ideal way of 
+showing the input would be to use an image sprite of a fight stick in
+all 8 positions, and change it according to the inputs. The classes 
+themselves are fairly self explanatory. */
+.fstick{
+    position: absolute;
+    width: 140px;
+    height: 132px;
+    top: 192px;
+    left: 74px;
+}
+.fstick.up{
+  
+}
+.fstick.down{
+  
+}
+.fstick.left{
+  
+}
+.fstick.right{
+  
+}
+.fstick.up.right{
+  
+}
+.fstick.up.left{
+  
+}
+.fstick.down.right{
+  
+}
+.fstick.down.left{
+  
+}
+
+/*END Xbox 360 Controller (Black) Styling*/
